@@ -19,3 +19,21 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# dagger
+-keepclassmembers,allowobfuscation class * {
+    @javax.inject.* *;
+    @dagger.* *;
+    <init>();
+}
+-keep class javax.inject.** { *; }
+-keep class **$$ModuleAdapter
+-keep class **$$InjectAdapter
+-keep class **$$StaticInjection
+-keep class dagger.** { *; }
+-dontwarn dagger.internal.codegen.**
+
+# Kotlin
+-keep class kotlin.Metadata { *; }
+-dontnote kotlin.internal.PlatformImplementationsKt
+-dontnote kotlin.reflect.jvm.internal.**
