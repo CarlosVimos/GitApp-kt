@@ -1,4 +1,4 @@
-package com.example.vimos.gitapp.feature
+package com.example.vimos.gitapp.feature.base
 
 import android.os.Bundle
 import android.support.annotation.LayoutRes
@@ -17,9 +17,8 @@ import com.example.vimos.gitapp.common.extension.getColorCompat
  */
 abstract class BaseFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
+        inflater.inflate(getLayoutId(), container, false)
 
     @LayoutRes
     abstract fun getLayoutId(): Int

@@ -1,4 +1,4 @@
-package com.example.vimos.gitapp.feature.search
+package com.example.vimos.gitapp.feature.main.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.vimos.gitapp.R
 import com.example.vimos.gitapp.app.App
-import com.example.vimos.gitapp.feature.BaseFragment
 import com.example.vimos.gitapp.feature.base.BaseMvpFragment
 
 /**
@@ -40,14 +39,7 @@ class SearchFragment : BaseMvpFragment<SearchFragmentView, SearchFragmentPresent
 
     override fun getLayoutId() = R.layout.fragment_search
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
 
-
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
 
 
 }

@@ -1,4 +1,4 @@
-package com.example.vimos.gitapp.feature.search
+package com.example.vimos.gitapp.feature.main.search
 
 import com.example.vimos.gitapp.feature.base.BasePresenter
 import io.reactivex.disposables.CompositeDisposable
@@ -11,6 +11,8 @@ import javax.inject.Inject
  */
 
 class  SearchFragmentPresenter @Inject constructor() : BasePresenter<SearchFragmentView>() {
+
+    val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
 
     private val disposables = CompositeDisposable()

@@ -22,7 +22,7 @@ class App : Application() {
 
     val applicationComponent: ApplicationComponent by lazy {
         DaggerApplicationComponent.builder()
-                .applicationModule(ApplicationModule(this))
+             //   .applicationModule(ApplicationModule(this))
                 .build()
     }
 }

@@ -2,7 +2,6 @@ package com.example.vimos.gitapp.feature.base
 
 import android.os.Bundle
 import android.view.View
-import com.example.vimos.gitapp.feature.BaseFragment
 
 /**
  * Created by Vimos on 29/06/2018.

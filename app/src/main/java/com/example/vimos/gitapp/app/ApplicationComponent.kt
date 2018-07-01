@@ -1,6 +1,6 @@
 package com.example.vimos.gitapp.app
 
-import com.example.vimos.gitapp.feature.search.SearchFragmentComponent
+import com.example.vimos.gitapp.feature.main.search.SearchFragmentComponent
 import dagger.Component
 import javax.inject.Singleton
 

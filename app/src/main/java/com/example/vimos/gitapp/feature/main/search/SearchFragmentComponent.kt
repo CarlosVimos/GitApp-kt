@@ -1,4 +1,4 @@
-package com.example.vimos.gitapp.feature.search
+package com.example.vimos.gitapp.feature.main.search
 
 import com.example.vimos.gitapp.common.di.FragmentScope
 import dagger.Subcomponent
