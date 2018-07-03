@@ -1,6 +1,6 @@
 package com.example.vimos.gitapp.app
 
-import com.example.vimos.gitapp.feature.main.search.SearchFragmentComponent
+import com.example.vimos.gitapp.feature.main.searchUser.SearchUserFragmentComponent
 import dagger.Component
 import javax.inject.Singleton
 
@@ -13,6 +13,6 @@ import javax.inject.Singleton
 interface ApplicationComponent {
 
 
-    fun searchFragmentComponent(): SearchFragmentComponent
+    fun searchFragmentComponent(): SearchUserFragmentComponent
 
 }

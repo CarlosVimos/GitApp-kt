@@ -10,7 +10,7 @@ abstract class BaseMvpFragment<T : MvpView, out P: Presenter<T>> : BaseFragment(
 
     private lateinit var presenter: P
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         attachViewToPresenter()
     }

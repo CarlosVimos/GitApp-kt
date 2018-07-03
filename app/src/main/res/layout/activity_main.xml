@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    tools:context="com.example.vimos.gitapp.feature.main.MainActivity">
+    tools:context="com.example.vimos.gitapp.feature.main.searchUser.SearchUserActivity">
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
