@@ -10,7 +10,7 @@ import dagger.Subcomponent
 @FragmentScope
 @Subcomponent
 interface SearchUserFragmentComponent {
-    fun inject(searchUserFragment: SearchUserUserFragment)
+    fun inject(searchUserFragment: SearchUserFragment)
 
     fun searchFragmentPresenter(): SearchUserFragmentPresenter
 }

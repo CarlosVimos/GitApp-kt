@@ -3,13 +3,14 @@ package com.example.vimos.gitapp.feature.main.searchUser
 import android.os.Bundle
 import android.view.View
 import com.example.vimos.gitapp.R
+import com.example.vimos.gitapp.R.id.searchUser
 import com.example.vimos.gitapp.app.App
 import com.example.vimos.gitapp.feature.base.BaseMvpFragment
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_search.*
+import kotlinx.android.synthetic.main.fragment_search_user.*
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
@@ -17,14 +18,14 @@ import java.util.concurrent.TimeUnit
  * Created by Vimos on 30/06/2018.
  */
 
-class SearchUserUserFragment : BaseMvpFragment<SearchUserFragmentView, SearchUserFragmentPresenter>(), SearchUserFragmentView {
+class SearchUserFragment : BaseMvpFragment<SearchUserFragmentView, SearchUserFragmentPresenter>(), SearchUserFragmentView {
 
 
     companion object {
-        val TAG: String = SearchUserUserFragment::class.java.name
+        val TAG: String = SearchUserFragment::class.java.name
 
 
-        fun newInstance() = SearchUserUserFragment()
+        fun newInstance() = SearchUserFragment()
     }
 
     val compositeDisposable: CompositeDisposable = CompositeDisposable()
@@ -66,7 +67,7 @@ class SearchUserUserFragment : BaseMvpFragment<SearchUserFragmentView, SearchUse
 
     override fun retrievePresenter() = App.getApplicationComponent(context).searchFragmentComponent().searchFragmentPresenter()
 
-    override fun getLayoutId() = R.layout.fragment_search
+    override fun getLayoutId() = R.layout.fragment_search_user
 
 
 }
