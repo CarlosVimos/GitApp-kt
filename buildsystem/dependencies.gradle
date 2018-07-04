@@ -1,0 +1,51 @@
+ext {
+    // Versions
+    supportLibraryVersion = '27.1.1'
+    daggerVersion = '2.13'
+    leakCanary = '1.5.4'
+    rxBinding = '2.1.1'
+    retrofit = '2.4.0'
+
+
+    libs = [
+            kotlinStdlib    : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$versions.kotlin",
+            appCompat       : "com.android.support:appcompat-v7:$supportLibraryVersion",
+            constraintLayout: "com.android.support.constraint:constraint-layout:1.1.2",
+            design          : "com.android.support:design:$supportLibraryVersion",
+            recyclerView    : "com.android.support:recyclerview-v7:$supportLibraryVersion",
+            rxJava2         : "io.reactivex.rxjava2:rxjava:2.1.14",
+            rxAndroid2      : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            rxKotlin2       : "io.reactivex.rxjava2:rxkotlin:2.1.0",
+            dagger2         : "com.google.dagger:dagger:$daggerVersion",
+            timber          : "com.jakewharton.timber:timber:4.7.1",
+            leakCanary      : "com.squareup.leakcanary:leakcanary-android:$leakCanary",
+            leakCanaryNoOp  : "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanary",
+            rxBinding2      : "com.jakewharton.rxbinding2:rxbinding:$rxBinding",
+            rxBinding2Kotlin: "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxBinding",
+            kotlinReflect   : "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin",
+            retrofit2       : "com.squareup.retrofit2:retrofit:$retrofit",
+            retrofit2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofit",
+            retrofit2Gson   : "com.squareup.retrofit2:converter-gson:$retrofit",
+            okHttp3Logging  : "com.squareup.okhttp3:logging-interceptor:3.6.0",
+            paging          : "android.arch.paging:runtime:1.0.0",
+    ]
+
+    kapt = [
+            daggerCompiler   : "com.google.dagger:dagger-compiler:$daggerVersion"
+    ]
+
+    proc = [
+            dagger2Compiler         : "com.google.dagger:dagger-compiler:$daggerVersion", // apt
+            dagger2Processor: "com.google.dagger:dagger-android-processor:2.13",
+            javaxAnnotation : "org.glassfish:javax.annotation:10.0-b28", // apt (provided)
+    ]
+
+    test = [
+            mockito      : "org.mockito:mockito-core:2.8.47",
+            mockitoKotlin: "com.nhaarman:mockito-kotlin:1.5.0",
+            junit        : "junit:junit:4.12",
+            jsr305       : "com.google.code.findbugs:jsr305:3.0.1",
+            testRunner   : "com.android.support.test:runner:1.0.2",
+            espresso     : "com.android.support.test.espresso:espresso-core:3.0.2",
+    ]
+}

@@ -12,9 +12,10 @@ import retrofit2.http.Query
 
 interface UserService {
 
-    @GET("/search/users?page=2")
+    @GET("/search/users?")
     fun searchUsers(
-            @Query("q") searchTerm: String): Observable<SearchResponse.UserList>
+            @Query("q") searchTerm: String,
+            @Query("page") nextPage: String): Observable<SearchResponse.UserList>
 
     /**
      * Companion object to create the GithubApiService

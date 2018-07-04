@@ -16,42 +16,62 @@ import javax.inject.Inject
 
 class  SearchUserFragmentPresenter @Inject constructor() : BasePresenter<SearchUserFragmentView>() {
 
-    val compositeDisposable: CompositeDisposable = CompositeDisposable()
-    val userProvider = SearchUserProvider.provideSearchUser()
-
+    private val compositeDisposable: CompositeDisposable = CompositeDisposable()
+    private val userProvider = SearchUserProvider.provideSearchUser()
 
     private val disposables = CompositeDisposable()
     private var disconnectSubscription: Disposable = Disposables.disposed()
 
-    private var query: String = ""
+    private var onPage = 1
+    private var username = ""
 
     fun setQueryFilter(query: String) {
 
         Timber.i("Search query: $query")
 
         query.let {
-            if (query.length > 2) {
-                loadUsers(query)
+            username = query
+            if (username.length > 2) {
+                loadUsers(false)
             }
         }
 
     }
 
-    fun loadUsers(username: String) {
+    fun loadUsers(insert: Boolean) {
+
+        var nextPage = ""
+
+        if (!insert) {
+            onPage = 1
+        } else {
+            onPage++
+        }
+
+        nextPage = onPage.toString()
+        getView()?.setLoading(true)
 
         compositeDisposable.add(
-                userProvider.searchUsers(username)
+                userProvider.searchUsers(username, nextPage)
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeOn(Schedulers.io())
                         .subscribe ({
                             result ->
+                            getView()?.setLoading(false)
                             Timber.i("There are ${result.items.size} $username users")
+                            getView()?.showUsers(result.items, true)
                         }, { error ->
                             error.printStackTrace()
+                            getView()?.setLoading(false)
                         })
         )
 
     }
+
+    fun loadMore() {
+        loadUsers(true)
+    }
+
 
     override fun detachView() {
         super.detachView()

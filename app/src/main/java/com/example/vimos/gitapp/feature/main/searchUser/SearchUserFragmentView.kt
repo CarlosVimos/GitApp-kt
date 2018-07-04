@@ -1,5 +1,6 @@
 package com.example.vimos.gitapp.feature.main.searchUser
 
+import com.example.vimos.gitapp.SearchResponse
 import com.example.vimos.gitapp.feature.base.MvpView
 
 /**
@@ -8,7 +9,7 @@ import com.example.vimos.gitapp.feature.base.MvpView
 
 interface SearchUserFragmentView : MvpView {
 
-    fun showUsers()
+    fun showUsers(list: MutableList<SearchResponse.User>, insert: Boolean)
     fun setLoading(show: Boolean)
     fun itemClickedInfo()
 

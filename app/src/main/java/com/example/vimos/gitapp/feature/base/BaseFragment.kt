@@ -28,7 +28,7 @@ abstract class BaseFragment : Fragment() {
         view?.let {
             val snackbar = Snackbar.make(it, resId, duration)
             val layout = snackbar.view as Snackbar.SnackbarLayout
-            layout.setBackgroundColor(context.getColorCompat(R.color.colorPrimary))
+            layout.setBackgroundColor(context!!.getColorCompat(R.color.colorPrimary))
             snackbar.show()
         }
     }

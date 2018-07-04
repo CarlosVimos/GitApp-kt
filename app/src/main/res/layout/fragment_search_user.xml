@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/fragmentSearchLayout"
+<RelativeLayout android:id="@+id/fragmentSearchLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bck"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <EditText
         android:id="@+id/searchUser"
+        style="@style/SearchBar"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:background="@color/colorAccent"
         android:layout_marginEnd="10dp"
         android:textColor="#FFF"
-        android:hint="username"
+        android:background="@drawable/search_bck"
+        android:hint="@string/username"
         />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@+id/searchUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:id="@+id/swipeRefreshLayout">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/userListRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            >
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

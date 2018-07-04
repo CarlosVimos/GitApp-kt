@@ -1,6 +1,7 @@
 package com.example.vimos.gitapp
 
 import com.google.gson.annotations.SerializedName
+import retrofit2.http.GET
 
 class SearchResponse {
 
@@ -20,6 +21,6 @@ class SearchResponse {
     data class UserList (
             @SerializedName("total_count") val total_count: Int,
             @SerializedName("incomplete_results") val incomplete_results: Boolean,
-            @SerializedName("items") val items: List<User>)
+            @SerializedName("items") val items: MutableList<User>)
 
 }
