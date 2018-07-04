@@ -63,13 +63,6 @@ class SearchUserFragment : BaseMvpFragment<SearchUserFragmentView, SearchUserFra
                         }
         )
 
-
-//        userListRecycler.addOnScrollListener(object : RecyclerViewScrollListener() {
-//            override fun onEndReached() {
-//                getPresenter().loadMore()
-//            }
-//        })
-
         userListRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
                     if (dy > 0) {

@@ -34,42 +34,40 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation libs.kotlinStdlib
-    implementation libs.appCompat
-    implementation libs.recyclerView
-    implementation libs.design
-    implementation libs.paging
+    implementation deps.kotlin.stdlib
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.design
+    implementation deps.paging
 
-    implementation libs.constraintLayout
+    implementation deps.constraint_layout
 
-    testImplementation test.junit
-    androidTestImplementation test.testRunner
-    androidTestImplementation test.espresso
+    testImplementation deps.junit
+    androidTestImplementation deps.test_runner
+    androidTestImplementation deps.espresso.core
 
-    implementation libs.rxKotlin2
-    implementation libs.rxAndroid2
-    implementation libs.rxJava2
-    implementation libs.rxBinding2
-    implementation libs.rxBinding2Kotlin
+    implementation deps.rx_kotlin
+    implementation deps.rx_android
+    implementation deps.rxjava2
+    implementation deps.rx_binding
+    implementation deps.rx_binding_kotlin
 
-    implementation libs.kotlinReflect
+    implementation deps.kotlin.reflect
 
-    implementation libs.dagger2
-    kapt proc.dagger2Compiler
-    kapt proc.dagger2Processor
+    implementation deps.dagger.runtime
+    kapt deps.dagger.compiler
+    kapt deps.dagger.android_support_compiler
 
-    debugImplementation libs.leakCanary
-    releaseImplementation libs.leakCanaryNoOp
+    debugImplementation deps.work.leakcanary
+    releaseImplementation deps.work.leakcanary_no_op
 
-    implementation libs.retrofit2
-    implementation libs.retrofit2Adapter
-    implementation libs.retrofit2Gson
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.adapter
+    implementation deps.retrofit.gson
 
-    implementation libs.okHttp3Logging
+    implementation deps.okhttp3_logging
 
-    implementation libs.timber
-
-
+    implementation deps.timber
 
 
 }
