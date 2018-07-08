@@ -27,12 +27,14 @@ versions.rx_binding = "2.1.1"
 versions.atsl_runner = "1.0.1"
 versions.atsl_rules = "1.0.1"
 versions.hamcrest = "1.3"
-versions.kotlin = "1.2.41"
+versions.kotlin = "1.2.50"
 versions.paging = "1.0.1"
 versions.work = "1.0.0-alpha04"
 versions.navigation = "1.0.0-alpha01"
 versions.leakcanary = "1.5.4"
 versions.okhttp3 = "3.6.0"
+versions.strictmode = "26.0.2"
+versions.multidex = "1.0.3"
 def deps = [:]
 
 def support = [:]
@@ -43,7 +45,8 @@ support.cardview = "com.android.support:cardview-v7:$versions.support"
 support.design = "com.android.support:design:$versions.support"
 support.v4 = "com.android.support:support-v4:$versions.support"
 support.core_utils = "com.android.support:support-core-utils:$versions.support"
-deps.test_runner = "com.android.support.test:runner:$versions.test_runner"
+support.test_runner = "com.android.support.test:runner:$versions.test_runner"
+support.multidex = "com.android.support:multidex:$versions.multidex"
 deps.support = support
 
 def room = [:]
@@ -124,6 +127,8 @@ deps.rx_binding_kotlin = "com.jakewharton.rxbinding2:rxbinding-kotlin:$versions.
 deps.hamcrest = "org.hamcrest:hamcrest-all:$versions.hamcrest"
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.okhttp3_logging = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3"
+deps.strictmode = "com.kirich1409:strict-mode-compat:$versions.strictmode"
+deps.strictmode_kotlin = "com.kirich1409:strict-mode-compat-kotlin:$versions.strictmode"
 ext.deps = deps
 
 def build_versions = [:]

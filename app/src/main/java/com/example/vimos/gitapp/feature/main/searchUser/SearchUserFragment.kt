@@ -1,11 +1,12 @@
 package com.example.vimos.gitapp.feature.main.searchUser
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import com.bumptech.glide.Glide
+import com.bumptech.glide.module.AppGlideModule
 import com.example.vimos.gitapp.R
 import com.example.vimos.gitapp.SearchResponse
 import com.example.vimos.gitapp.app.App
@@ -119,6 +120,9 @@ class SearchUserFragment : BaseMvpFragment<SearchUserFragmentView, SearchUserFra
             userAdapter?.notifyDataSetChanged()
 
         }
+
+        Glide.with(this)
+                .load(userAdapter)
 
         scrollListener?.setLoading(true)
         setLoadScroll(true)

@@ -9,11 +9,13 @@ class SearchResponse {
             @SerializedName("login") val login: String,
             @SerializedName("id") val id: Long,
             @SerializedName("url") val url: String,
+            @SerializedName("avatar_url") val avatarUrl: String,
             @SerializedName("html_url") val htmlUrl: String,
             @SerializedName("followers_url") val followersUrl: String,
             @SerializedName("following_url") val followingUrl: String,
             @SerializedName("starred_url") val starredUrl: String,
             @SerializedName("gists_url") val gistsUrl: String,
+            @SerializedName("repos_url") val reposUrl: String,
             @SerializedName("type") val type: String,
             @SerializedName("score") val score: Double
     )

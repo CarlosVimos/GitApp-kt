@@ -15,6 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         debug {
@@ -42,8 +43,10 @@ dependencies {
 
     implementation deps.constraint_layout
 
+    implementation deps.strictmode_kotlin
+
     testImplementation deps.junit
-    androidTestImplementation deps.test_runner
+    androidTestImplementation deps.support.test_runner
     androidTestImplementation deps.espresso.core
 
     implementation deps.rx_kotlin
@@ -68,6 +71,10 @@ dependencies {
     implementation deps.okhttp3_logging
 
     implementation deps.timber
+    implementation deps.glide.runtime
+    annotationProcessor deps.glide.compiler
+
+    implementation deps.support.multidex
 
 
 }

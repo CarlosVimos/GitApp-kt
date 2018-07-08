@@ -3,6 +3,7 @@ package com.example.vimos.gitapp.feature.main.searchUser
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.example.vimos.gitapp.R
 import com.example.vimos.gitapp.SearchResponse
 

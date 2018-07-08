@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/fragmentSearchLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentSearchLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bck"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/gradient_bck">
 
     <EditText
         android:id="@+id/searchUser"
         style="@style/SearchBar"
-        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:textColor="#FFF"
         android:background="@drawable/search_bck"
         android:hint="@string/username"
-        />
+        android:textColor="#FFF"
+        app:layout_editor_absoluteY="@dimen/padding_avg"
+     />
 
     <android.support.v4.widget.SwipeRefreshLayout
-        android:layout_below="@+id/searchUser"
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="15dp"
-        android:id="@+id/swipeRefreshLayout">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/searchUser"
+        android:layout_marginTop="@dimen/padding_avg"
+        >
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/userListRecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-            >
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
 
         </android.support.v7.widget.RecyclerView>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

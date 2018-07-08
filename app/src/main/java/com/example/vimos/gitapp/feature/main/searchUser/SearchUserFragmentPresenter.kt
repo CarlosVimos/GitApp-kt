@@ -27,6 +27,7 @@ class  SearchUserFragmentPresenter @Inject constructor() : BasePresenter<SearchU
 
     fun setQueryFilter(query: String) {
 
+
         Timber.i("Search query: $query")
 
         query.let {
@@ -39,7 +40,6 @@ class  SearchUserFragmentPresenter @Inject constructor() : BasePresenter<SearchU
     }
 
     fun loadUsers(insert: Boolean) {
-
         var nextPage = ""
 
         if (!insert) {
